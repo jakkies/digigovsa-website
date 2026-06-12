@@ -1116,7 +1116,7 @@ a {
   }
 
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(7, 29, 54, 0.74) 0%, rgba(7, 29, 54, 0.64) 56%, rgba(7, 29, 54, 0.28) 100%);
+    /*background: linear-gradient(90deg, rgba(7, 29, 54, 0.74) 0%, rgba(7, 29, 54, 0.64) 56%, rgba(7, 29, 54, 0.28) 100%);*/
   }
 
   .hero-inner {
@@ -1184,7 +1184,7 @@ a {
 
   .hero {
     min-height: 600px;
-    background-position: 90% top;
+    background-position: 60% top;
   }
 
   .hero-inner {
