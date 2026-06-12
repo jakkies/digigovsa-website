@@ -385,17 +385,35 @@ a {
   flex-shrink: 0;
 }
 
-.logo-presidency { height: 92px; }
-.logo-sarb { height: 82px; }
-.logo-home-affairs { height: 82px; }
-.logo-mymzansi { height: 104px; }
-.logo-national-treasury { height: 82px; }
-.logo-mzansixchange { height: 74px; }
+.logo-presidency {
+  height: 92px;
+}
+
+.logo-sarb {
+  height: 82px;
+}
+
+.logo-home-affairs {
+  height: 82px;
+}
+
+.logo-mymzansi {
+  height: 104px;
+}
+
+.logo-national-treasury {
+  height: 82px;
+}
+
+.logo-mzansixchange {
+  height: 74px;
+}
 
 @keyframes logoScroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-33.3333%);
   }
@@ -1191,8 +1209,8 @@ a {
   }
 
   .logo-img {
-    max-width: 110px;
-    height: 54px;
+    max-width: 220px;
+    height: 94px;
   }
 
   .section-title {
