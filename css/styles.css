@@ -137,6 +137,7 @@ a {
 
 .btn-dark:hover {
   background: #123967;
+  box-shadow: 0 8px 20px rgba(8, 38, 74, 0.3);
 }
 
 .btn-green {
@@ -151,6 +152,7 @@ a {
 
 .btn-green:hover {
   background: #70c789;
+  box-shadow: 0 16px 32px rgba(62, 142, 91, 0.32);
 }
 
 .btn-white {
@@ -161,6 +163,7 @@ a {
 
 .btn-white:hover {
   background: #f7fafc;
+  box-shadow: 0 14px 32px rgba(8, 38, 74, 0.18);
 }
 
 .site-header {
@@ -224,11 +227,11 @@ a {
   font-weight: 800;
 }
 
-.site-nav > a:not(.btn) {
+.site-nav>a:not(.btn) {
   transition: color 180ms ease;
 }
 
-.site-nav > a:not(.btn):hover {
+.site-nav>a:not(.btn):hover {
   color: var(--navy-deep);
 }
 
@@ -246,6 +249,12 @@ a {
   background: var(--white);
   color: var(--navy-deep);
   cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(8, 38, 74, 0.1);
 }
 
 .menu-toggle span {
@@ -294,7 +303,7 @@ a {
 }
 
 .hero-copy {
-  width: 575px;
+  width: 615px;
   margin-top: 20px;
 }
 
@@ -421,7 +430,7 @@ a {
   margin: 0;
 }
 
-.section-copy p + p {
+.section-copy p+p {
   margin-top: 30px;
 }
 
@@ -450,6 +459,15 @@ a {
   border: 1px solid var(--border);
   background: var(--white);
   box-shadow: var(--shadow-card);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.feature-card:hover,
+.comparison-card:hover,
+.approach-callout:hover,
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(8, 38, 74, 0.12);
 }
 
 .feature-card {
@@ -586,6 +604,10 @@ a {
   box-shadow: 0 22px 52px rgba(8, 38, 74, 0.22);
 }
 
+.comparison-digigov:hover {
+  box-shadow: 0 28px 64px rgba(8, 38, 74, 0.32);
+}
+
 .comparison-digigov .comparison-topline {
   color: var(--green);
 }
@@ -679,6 +701,12 @@ a {
   border-radius: var(--radius-lg);
   background: rgba(41, 75, 118, 0.36);
   padding: 32px;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.security-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25), 0 0 12px rgba(98, 183, 122, 0.15);
 }
 
 .outline-icon {
@@ -881,7 +909,7 @@ a {
   line-height: 1.55;
 }
 
-.cta-card p + p:not(.initiative-pill) {
+.cta-card p+p:not(.initiative-pill) {
   margin-top: 18px;
 }
 
@@ -941,7 +969,7 @@ a {
   text-transform: uppercase;
 }
 
-.footer-bottom nav a + a::before {
+.footer-bottom nav a+a::before {
   content: "";
   display: inline-block;
   width: 4px;
@@ -1215,7 +1243,7 @@ a {
     gap: 14px;
   }
 
-  .footer-bottom nav a + a::before {
+  .footer-bottom nav a+a::before {
     margin-right: 14px;
   }
 }
