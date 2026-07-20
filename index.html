@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="DigiGovSA is a National Treasury initiative building digital foundations for a connected, secure and citizen-centred government.">
+  <title>DigiGovSA | Connected Government</title>
+  <link rel="icon" href="assets/logos/digigovsa-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </symbol>
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <rect x="9" y="3" width="6" height="6" rx="1.5" />
+      <rect x="3" y="15" width="6" height="6" rx="1.5" />
+      <rect x="15" y="15" width="6" height="6" rx="1.5" />
+      <path d="M12 9v4" />
+      <path d="M6 15v-2h12v2" />
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="7" ry="3" />
+      <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
+      <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 3 19 6v5c0 4.5-2.8 8.5-7 10-4.2-1.5-7-5.5-7-10V6Z" />
+      <path d="m9 12 2 2 4-4" />
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="M13 3v5l4 2-4 2v5l-2-4-5-1 5-2Z" />
+      <path d="M18 14v3" />
+      <path d="M18 21v-1" />
+      <path d="M20 18h1" />
+      <path d="M15 18h1" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="m6 12 4 4 8-8" />
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="m8 8 8 8" />
+      <path d="m16 8-8 8" />
+    </symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24">
+      <path d="M17.5 18H8a5 5 0 1 1 1.1-9.9A6.5 6.5 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 18Z" />
+    </symbol>
+    <symbol id="icon-key" viewBox="0 0 24 24">
+      <circle cx="8" cy="14" r="3" />
+      <path d="m10.2 11.8 7.3-7.3" />
+      <path d="M14 8h4v4" />
+    </symbol>
+    <symbol id="icon-fingerprint" viewBox="0 0 24 24">
+      <path d="M7 11a5 5 0 0 1 10 0" />
+      <path d="M7 15v-4" />
+      <path d="M17 11v1" />
+      <path d="M9.5 17c.3-1.2.5-2.4.5-3.6V11a2 2 0 0 1 4 0v2.2" />
+      <path d="M14 17.5c.5-1.3.8-2.8.8-4.3V11" />
+      <path d="M11.5 20c.4-1 .7-2.1.9-3.3" />
+      <path d="M5 13v-2a7 7 0 0 1 14 0v1" />
+    </symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <path d="M3 10h18" />
+    </symbol>
+    <symbol id="icon-scale" viewBox="0 0 24 24">
+      <path d="M12 3v18" />
+      <path d="M5 6h14" />
+      <path d="M6 6 3 13h6Z" />
+      <path d="m18 6-3 7h6Z" />
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24">
+      <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24">
+      <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" />
+      <path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1" />
+    </symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="DigiGovSA home">
+        <img class="brand-logo" src="assets/logos/digigovsa-logo.png" alt="DigiGovSA">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="treasury-lockup" aria-label="National Treasury, Republic of South Africa">
+          <span>National Treasury</span>
+          <span>Republic of South Africa</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav"
+        aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#why-digigov">Why DigiGovSA</a>
+        <a href="#approach">Approach</a>
+        <a href="#trust-security">Trust &amp; Security</a>
+        <a class="btn btn-dark nav-cta" href="#get-connected">
+          <span>Get Connected</span>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span class="hero-orange">Building the Digital</span>
+            <span class="hero-orange">Foundations for a</span>
+            <span class="hero-green">Connected</span>
+            <span class="hero-green">Government</span>
+          </h1>
+          <p>DigiGovSA is the National Treasury's flagship initiative to modernise South Africa's financial transversal
+            systems and establish the digital foundations required for a more efficient and secure government.</p>
+          <div class="hero-actions">
+            <a class="btn btn-green" href="#get-connected">
+              <span>Get Connected</span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+            </a>
+            <a class="btn btn-white" href="#approach">How DigiGovSA Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration logo strip -->
+    <section class="logo-strip" aria-labelledby="collaboration-title">
+      <div class="container">
+        <p class="logo-strip-label" id="collaboration-title">In collaboration with:</p>
+      </div>
+      <div class="logo-carousel">
+        <div class="logo-carousel-track">
+          <!-- Set 1 -->
+          <img src="assets/logos/presidency-logo.png" class="logo-img logo-presidency"
+            alt="The Presidency, Republic of South Africa">
+          <img src="assets/logos/sarb-logo.png" class="logo-img logo-sarb" alt="South African Reserve Bank">
+          <img src="assets/logos/home-affairs-logo.png" class="logo-img logo-home-affairs"
+            alt="Department of Home Affairs, Republic of South Africa">
+          <img src="assets/logos/mymzansi-logo.png" class="logo-img logo-mymzansi" alt="MyMzansi">
+          <img src="assets/logos/national-treasury-logo.png" class="logo-img logo-national-treasury"
+            alt="National Treasury, Republic of South Africa">
+          <img src="assets/logos/mzansixchange-logo.png" class="logo-img logo-mzansixchange" alt="MzansiXchange">
+
+          <!-- Set 2 (Duplicate for infinite loop) -->
+          <img src="assets/logos/presidency-logo.png" class="logo-img logo-presidency"
+            alt="The Presidency, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/sarb-logo.png" class="logo-img logo-sarb" alt="South African Reserve Bank"
+            aria-hidden="true">
+          <img src="assets/logos/home-affairs-logo.png" class="logo-img logo-home-affairs"
+            alt="Department of Home Affairs, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/mymzansi-logo.png" class="logo-img logo-mymzansi" alt="MyMzansi" aria-hidden="true">
+          <img src="assets/logos/national-treasury-logo.png" class="logo-img logo-national-treasury"
+            alt="National Treasury, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/mzansixchange-logo.png" class="logo-img logo-mzansixchange" alt="MzansiXchange"
+            aria-hidden="true">
+
+          <!-- Set 3 (Duplicate for infinite loop) -->
+          <img src="assets/logos/presidency-logo.png" class="logo-img logo-presidency"
+            alt="The Presidency, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/sarb-logo.png" class="logo-img logo-sarb" alt="South African Reserve Bank"
+            aria-hidden="true">
+          <img src="assets/logos/home-affairs-logo.png" class="logo-img logo-home-affairs"
+            alt="Department of Home Affairs, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/mymzansi-logo.png" class="logo-img logo-mymzansi" alt="MyMzansi" aria-hidden="true">
+          <img src="assets/logos/national-treasury-logo.png" class="logo-img logo-national-treasury"
+            alt="National Treasury, Republic of South Africa" aria-hidden="true">
+          <img src="assets/logos/mzansixchange-logo.png" class="logo-img logo-mzansixchange" alt="MzansiXchange"
+            aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- The Case for Change -->
+    <section class="section section-soft" id="why-digigov" aria-labelledby="case-title">
+      <div class="container">
+        <p class="eyebrow">The Case for Change</p>
+        <h2 class="section-title" id="case-title">Modernising the Systems That Power Government</h2>
+        <div class="section-copy">
+          <p>Many of government's most important administrative systems were designed for a different era. Fragmented
+            processes, disconnected information and ageing technology make it increasingly difficult to deliver services
+            efficiently, respond to changing needs and protect against emerging cyber threats.</p>
+          <p>DigiGovSA is supporting the modernisation of these foundational systems through a secure, cloud-enabled and
+            interoperable digital architecture designed for the future.</p>
+        </div>
+
+        <div class="feature-grid feature-grid-four">
+          <article class="feature-card">
+            <div class="card-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-network"></use>
+              </svg></div>
+            <span class="card-number">01</span>
+            <h3>Connected Government</h3>
+            <p>Break down silos and improve coordination across departments and spheres of government.</p>
+          </article>
+          <article class="feature-card">
+            <div class="card-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-database"></use>
+              </svg></div>
+            <span class="card-number">02</span>
+            <h3>Trusted Data</h3>
+            <p>Enable secure information sharing with verifiable provenance and governed access.</p>
+          </article>
+          <article class="feature-card">
+            <div class="card-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-shield"></use>
+              </svg></div>
+            <span class="card-number">03</span>
+            <h3>Secure by Design</h3>
+            <p>Protect critical government systems against modern and emerging cyber threats.</p>
+          </article>
+          <article class="feature-card">
+            <div class="card-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-sparkles"></use>
+              </svg></div>
+            <span class="card-number">04</span>
+            <h3>Future Ready</h3>
+            <p>Leverage cloud, automation and AI to deliver responsive, modern public services.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Approach -->
+    <section class="section section-soft section-approach" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <p class="eyebrow">A New Approach</p>
+        <h2 class="section-title" id="approach-title">A New Approach to Government Modernisation</h2>
+        <div class="section-copy wide-copy">
+          <p>DigiGovSA represents a strategic shift away from large monolithic implementations towards a flexible and
+            composable architecture built from interoperable digital building blocks.</p>
+          <p>This approach allows government to adopt the best available technologies for specific functions while
+            avoiding vendor lock-in and reducing implementation risk.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <article class="comparison-card comparison-legacy">
+            <div class="comparison-topline">
+              <span>Traditional Approach</span>
+              <small>Legacy</small>
+            </div>
+            <h3>Single Vendor ERP</h3>
+            <ul class="check-list muted-list" aria-label="Traditional approach limitations">
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-x"></use>
+                  </svg></span>Single Vendor ERP</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-x"></use>
+                  </svg></span>Monolithic Systems</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-x"></use>
+                  </svg></span>High Dependency</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-x"></use>
+                  </svg></span>Slow Change</li>
+            </ul>
+          </article>
+
+          <article class="comparison-card comparison-digigov">
+            <div class="comparison-topline">
+              <span>DigiGovSA</span>
+              <small class="recommended">Recommended</small>
+            </div>
+            <h3>Composable Architecture</h3>
+            <ul class="check-list" aria-label="DigiGovSA approach strengths">
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-check"></use>
+                  </svg></span>Best-of-Breed Solutions</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-check"></use>
+                  </svg></span>Modular Components</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-check"></use>
+                  </svg></span>Open Standards</li>
+              <li><span><svg class="icon" aria-hidden="true">
+                    <use href="#icon-check"></use>
+                  </svg></span>Continuous Improvement</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="approach-callout">
+          <div class="callout-icon"><svg class="icon" aria-hidden="true">
+              <use href="#icon-cloud"></use>
+            </svg></div>
+          <p>DigiGovSA enables smarter workflows, improved oversight and more responsive public services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust, Identity & Security -->
+    <section class="section security-section" id="trust-security" aria-labelledby="security-title">
+      <div class="container">
+        <p class="eyebrow eyebrow-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-shield"></use>
+          </svg>
+          Trust, Identity &amp; Security
+        </p>
+        <h2 class="section-title" id="security-title">Building Trust Through Identity and Verification</h2>
+        <p class="lead-green">Trust is the foundation of digital government.</p>
+        <p class="security-copy">DigiGovSA introduces secure digital identity, verifiable credentials and advanced
+          verification mechanisms that protect public resources while enabling seamless access to government systems.
+        </p>
+
+        <div class="security-grid">
+          <article class="security-card">
+            <div class="outline-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-key"></use>
+              </svg></div>
+            <h3>DigiGov SSO Portal</h3>
+            <p>A secure single point of access for government officials across departments and systems.</p>
+          </article>
+          <article class="security-card">
+            <div class="outline-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-fingerprint"></use>
+              </svg></div>
+            <h3>Real-Time Verification</h3>
+            <p>Biometric verification and liveness testing linked to trusted national identity systems.</p>
+          </article>
+          <article class="security-card">
+            <div class="outline-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-card"></use>
+              </svg></div>
+            <h3>Secure Payments</h3>
+            <p>Alignment with SARB's Payment Ecosystem Modernisation programme.</p>
+          </article>
+        </div>
+
+        <article class="highlight-panel">
+          <div>
+            <p class="eyebrow">Highlight</p>
+            <h3>Eliminating Payroll Fraud</h3>
+            <p>Real-time verification and identity assurance can help eliminate ghost workers and strengthen
+              accountability across government.</p>
+          </div>
+          <div class="highlight-icon"><svg class="icon" aria-hidden="true">
+              <use href="#icon-link"></use>
+            </svg></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Building on Experience -->
+    <section class="section section-soft" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="eyebrow">Learning From the Past</p>
+        <h2 class="section-title" id="experience-title">Building on Experience. Delivering Differently.</h2>
+        <div class="section-copy wide-copy">
+          <p>South Africa's digital transformation journey has generated valuable lessons about complexity, governance,
+            implementation risk and long-term sustainability. DigiGovSA was designed to apply those lessons.</p>
+          <p>Instead of relying on a single-vendor ERP strategy, DigiGovSA adopts a decentralised and modular approach
+            that improves flexibility, reduces dependency and supports incremental delivery.</p>
+        </div>
+
+        <div class="feature-grid feature-grid-three">
+          <article class="feature-card compact-card">
+            <div class="soft-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-scale"></use>
+              </svg></div>
+            <h3>Accountability</h3>
+            <p>Strong governance and oversight at every layer of delivery.</p>
+          </article>
+          <article class="feature-card compact-card">
+            <div class="soft-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-eye"></use>
+              </svg></div>
+            <h3>Transparency</h3>
+            <p>Open reporting and measurable progress against public commitments.</p>
+          </article>
+          <article class="feature-card compact-card">
+            <div class="soft-icon"><svg class="icon" aria-hidden="true">
+                <use href="#icon-link"></use>
+              </svg></div>
+            <h3>Responsibility</h3>
+            <p>Responsible, considered use of public resources at all times.</p>
+          </article>
+        </div>
+
+        <div class="timeline-card" aria-label="DigiGovSA delivery timeline">
+          <div class="timeline-steps">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <article class="timeline-step">
+              <span class="timeline-dot">1</span>
+              <h3>Legacy Approaches</h3>
+              <p>Past</p>
+            </article>
+            <article class="timeline-step">
+              <span class="timeline-dot">2</span>
+              <h3>Lessons Learned</h3>
+              <p>Insight</p>
+            </article>
+            <article class="timeline-step active">
+              <span class="timeline-dot">3</span>
+              <h3>DigiGovSA</h3>
+              <p>Now</p>
+            </article>
+            <article class="timeline-step">
+              <span class="timeline-dot">4</span>
+              <h3>Future Government</h3>
+              <p>Horizon</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" id="get-connected" aria-labelledby="cta-title">
+      <div class="container">
+        <article class="cta-card">
+          <p class="initiative-pill"><span></span>National Initiative</p>
+          <h2 id="cta-title">Building the Future of Digital Government</h2>
+          <p>DigiGovSA is helping create a connected and secure government by modernising the systems that underpin
+            public administration.</p>
+          <p>Together with National Treasury, The Presidency, and government partners, DigiGovSA is laying the digital
+            foundations for better services, stronger institutions and a more empowered government.</p>
+          <a class="btn btn-green" href="mailto:info@digigovsa.gov.za">
+            <span>Get Connected</span>
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logos/digigovsa-logo.png" alt="DigiGovSA">
+        <p>One Vision. Connected Systems. Better Services.</p>
+      </div>
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigiGovSA &middot; National Treasury, Republic of South Africa</p>
+        <!--<nav aria-label="Footer navigation">
+          <a href="https://www.treasury.gov.za/">National Treasury</a>
+          <a href="https://www.thepresidency.gov.za/">The Presidency</a>
+          <a href="https://www.gov.za/">RSA</a>
+        </nav>-->
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
