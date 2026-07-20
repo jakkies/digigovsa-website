@@ -127,6 +127,19 @@ a {
   transform: translateY(-1px);
 }
 
+.btn-green-round {
+  min-height: 42px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 5px 14px rgba(8, 38, 74, 0.22);
+}
+
+.btn-green-round:hover {
+  background: #123967;
+  box-shadow: 0 8px 20px rgba(8, 38, 74, 0.3);
+}
+
 .btn-dark {
   min-height: 42px;
   border-radius: 999px;
@@ -303,7 +316,7 @@ a {
 }
 
 .hero-copy {
-  width: 615px;
+  width: 695px !important;
   margin-top: 20px;
 }
 
@@ -321,6 +334,10 @@ a {
 
 .hero-orange {
   color: var(--orange);
+}
+
+.hero-white {
+  color: var(--white);
 }
 
 .hero-green {
@@ -425,6 +442,10 @@ a {
 
 .section-soft {
   background: var(--bg-soft);
+}
+
+.section-white {
+  background: var(--white);
 }
 
 .eyebrow {
@@ -555,6 +576,178 @@ a {
 .section-approach {
   padding-top: 126px;
   border-top: 1px solid #dfe8f2;
+}
+
+.human-interface {
+  padding-top: 96px;
+  padding-bottom: 104px;
+  border-top: 1px solid #dfe8f2;
+}
+
+.human-interface-header {
+  max-width: 930px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.human-interface-header .eyebrow {
+  margin-bottom: 20px;
+  letter-spacing: 0.18em;
+}
+
+.human-interface-header .section-title {
+  max-width: none;
+  font-size: 50px;
+  line-height: 1.03;
+}
+
+.human-interface-header .section-title span {
+  display: block;
+  color: var(--green-strong);
+}
+
+.human-interface-header>p:last-child {
+  max-width: 790px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.interface-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+  margin-top: 72px;
+}
+
+.interface-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.interface-persona {
+  display: flex;
+  min-height: 310px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 34px 28px;
+}
+
+.interface-label {
+  margin: 0;
+  color: #657287;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mymzansi-mark {
+  width: 225px;
+  margin: 6px auto 0;
+}
+
+.my-digigov-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 28px 0 12px;
+}
+
+.my-digigov-mark span {
+  margin-right: -2px;
+  color: #050505;
+  font-family: "Segoe Script", "Bradley Hand", cursive;
+  font-size: 43px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
+  transform: rotate(-6deg);
+}
+
+.my-digigov-mark img {
+  width: 300px;
+  height: auto;
+}
+
+.interface-service {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.interface-connection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  color: var(--green-strong);
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.interface-connection span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.interface-connection-left {
+  flex-direction: row;
+}
+
+.infrastructure-card {
+  min-height: 370px;
+  border-color: transparent;
+  background: var(--navy);
+  box-shadow: 0 18px 36px rgba(8, 38, 74, 0.18);
+  padding: 30px 30px 28px;
+  color: var(--white);
+}
+
+.infrastructure-card .interface-label {
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}
+
+.infrastructure-card h3 {
+  margin: 8px 0 24px;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.infrastructure-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.infrastructure-list li {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 14px;
+  background: var(--white);
+  padding: 0 16px;
+  color: var(--navy-ink);
+  font-size: 14px;
+}
+
+.infrastructure-list .icon {
+  flex: 0 0 auto;
+  color: #1887df;
+  font-size: 15px;
+  stroke-width: 1.7;
 }
 
 .comparison-grid {
@@ -1147,8 +1340,19 @@ a {
 
   .comparison-grid,
   .security-grid,
-  .feature-grid-three {
+  .feature-grid-three,
+  .interface-grid {
     grid-template-columns: 1fr;
+  }
+
+  .interface-grid {
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .interface-persona,
+  .infrastructure-card {
+    min-height: auto;
   }
 
   .comparison-card {
@@ -1216,6 +1420,46 @@ a {
 
   .section-title {
     font-size: 34px;
+  }
+
+  .human-interface {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  .human-interface-header .section-title {
+    font-size: 34px;
+  }
+
+  .human-interface-header>p:last-child {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .interface-grid {
+    gap: 22px;
+    margin-top: 46px;
+  }
+
+  .interface-persona,
+  .infrastructure-card {
+    padding: 26px;
+  }
+
+  .interface-persona {
+    min-height: 292px;
+  }
+
+  .infrastructure-card {
+    min-height: 350px;
+  }
+
+  .my-digigov-mark span {
+    font-size: 36px;
+  }
+
+  .my-digigov-mark img {
+    width: 175px;
   }
 
   .section-copy {
