@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Check out source repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -34,7 +34,7 @@ jobs:
           MIRROR_TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
           FORCE_INITIAL_ALIGNMENT: ${{ inputs.force_initial_alignment }}
         run: |
-          git remote add deployment "https://x-access-token:${MIRROR_TOKEN}@github.com/giggsrm/digigovsa-website-new.git"
+          git remote add deployment "https://giggsrm:${MIRROR_TOKEN}@github.com/giggsrm/digigovsa-website-new.git"
 
           if [ "${FORCE_INITIAL_ALIGNMENT}" = "true" ]; then
             git push --force deployment HEAD:main
