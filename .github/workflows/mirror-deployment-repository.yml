@@ -1,0 +1,43 @@
+name: Mirror deployment repository
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      force_initial_alignment:
+        description: Replace deployment main during the one-time initial alignment
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-deployment-main
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push source main to deployment repository
+        env:
+          MIRROR_TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
+          FORCE_INITIAL_ALIGNMENT: ${{ inputs.force_initial_alignment }}
+        run: |
+          git remote add deployment "https://x-access-token:${MIRROR_TOKEN}@github.com/giggsrm/digigovsa-website-new.git"
+
+          if [ "${FORCE_INITIAL_ALIGNMENT}" = "true" ]; then
+            git push --force deployment HEAD:main
+          else
+            git push deployment HEAD:main
+          fi
